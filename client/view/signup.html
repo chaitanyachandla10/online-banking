@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.hero-image {
+  background-image: url("./images/1.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="hero-image">
+  <div class="hero-text">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">B.M.S.</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li id="page1"><a href="#">Page 1</a></li>
+      <li id="page2"><a href="#">Page 2</a></li>
+      <li id="page3"><a href="#">Page 3</a></li>
+      <li id="signup"><a href="signup.html">signup</a><li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Register here</h1>
+  <form>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" placeholder="username"  class="form-control" ng-model="name" required="name">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" placeholder="password" class="form-control" ng-model="pwd" required="password">
+    </div>
+    <div class="form-group">
+      <label for="pwd">RepeatPassword:</label>
+       <input type="password" placeholder="Retype password" class="form-control" ng-model="pwd" required="password">
+    </div>
+    
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <style>
+.button {
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+
+<body>
+<button class="button">Signup</button>
+  </form>
+<
+  </div>
+</div>
+
+
+</body>
+</html>
