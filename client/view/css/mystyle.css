@@ -22,9 +22,9 @@ body {
       border-color: #f1f1f1;
   }
   .carousel-inner img {
-      -webkit-filter: grayscale(90%);
-      filter: grayscale(90%); /* make all photos black and white */ 
-      width: 100%; /* Set width to 100% */
+
+        height: 500px;
+      width: 90%; /* Set width to 100% */
       margin: auto;
   }
   .carousel-caption h3 {
@@ -158,7 +158,7 @@ body {
   #section1 
 {
 padding-top:50px;
-height:500px;
+height:580px;
 color: black;
 background-color:#FFE4B5;
 margin-top: 0px;
