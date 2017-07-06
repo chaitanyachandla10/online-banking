@@ -10,7 +10,7 @@ banking
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
 </head>
-<body>
+<body ng-app="app">
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -28,6 +28,8 @@ banking
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
         <li><a href="#">Send money</a></li>
+        <li><a ui-sref="signup">signup here</a><li>
+        <li><a ui-sref="login">login</a></li>
         <li><a href="#">Balance inquiry</a></li>
 </ul>
 
@@ -64,13 +66,11 @@ banking
           </ul>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-        
-        <li><a ui-serf="#">Login</a><li>&ensp;&ensp;
-        <li><a ui-serf="#">SignIn</a></li>
-  </ul>W
+  </ul>
     </div>
   </div>
 </nav>
+<div ui-view="">
 <div id="section1" class="container-fluid">
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -83,7 +83,7 @@ banking
   <!-- Wrapper for slides -->
   <div class="carousel-inner">
     <div class="item active">
-      <img src="/bank.jpg" alt="Los Angeles" height="490px">
+      <img src="images/bank.jpg" alt="Los Angeles" height="490px">
     </div>
 
     <div class="item">
@@ -121,6 +121,7 @@ banking
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
   <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
 </div>
+</div>
 <footer id="footer">
 <table>
   <tr>
@@ -135,5 +136,9 @@ banking
       </tr>
     </table>        
 </footer>
+<SCRIPT TYPE="text/javascript" src="./bower_components/angular/angular.min.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" src="./controller/index.js"></SCRIPT>
+<script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+<SCRIPT TYPE="text/javascript" src="./controller/signup.js"></SCRIPT>
 </body>
 </html>

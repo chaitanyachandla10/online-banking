@@ -4,7 +4,7 @@ var myapp = express();
 //var url = 'mongodb://localhost:27017/test';
 console.log("path",__dirname);
 myapp.use(express.static(__dirname+'./../client/view'))
-
+myapp.use(express.static(__dirname + './../client'));
 myapp.get('/',function(req,res)
 {
 	res.render('index.html');
