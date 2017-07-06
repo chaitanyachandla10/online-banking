@@ -9,7 +9,12 @@ $scope.signup=function()
 		params:
 		{
 			username : $scope.uname,
-			password : $scope.password
+			password : $scope.password,
+			address	:$scope.address,
+			email:$scope.email,
+			phone:$scope.phoneno,
+			pan:$scope.pan,
+			aadhar:$scope.aadhar
 		}
 	})
 	.then(function(response)

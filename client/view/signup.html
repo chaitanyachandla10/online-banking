@@ -1,10 +1,16 @@
-<div>
-<div ng-controller="signup">
+<br><br>
+<div border="solid" height="650px" width="100%">
+<div ng-controller="signup" border="solid" height="650px" width="100%">
 <center>
 <h2>FIll Form</h2>
-<Label>name:</label><input type="text" placeholder="name" ng-model="uname"><br><br>
+<Label>Name:</label><input type="text" placeholder="name" ng-model="uname"><br><br>
 <Label>password:</label><input type="password" placeholder="password" ng-model="password"><br><br>
-<Label>address:</label><input type="text" placeholder="address" ng-model="address"><br><br>
+<Label>confirm password:</label><input type="password" placeholder="Retype" ng-model="password"><br><br>	
+<Label>Address:</label><input type="text" placeholder="address" ng-model="address"><br><br>
+<Label>Email:</label><input type="email" placeholder="email" ng-model="email"><br><br>
+<Label>Phone No:</label><input type="int" placeholder="phoneno" ng-model="phoneno"><br><br>
+<Label>PAN Number:</label><input type="number" placeholder="PAN" ng-model="pan"><br><br>
+<Label>Aadhaar Card Number:</label><input type="number" placeholder="6511531651" ng-model="aadhar"><br><br>
 <BUTTON ng-click="signup()">submit</BUTTON>
 </center>
 </div>

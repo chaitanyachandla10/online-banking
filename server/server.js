@@ -1,7 +1,7 @@
 var express = require('express');
 var myapp = express();
-//var MongoClient = require('mongodb').MongoClient
-//var url = 'mongodb://localhost:27017/test';
+var MongoClient = require('mongodb').MongoClient
+var url = 'mongodb://localhost:27017/onlinebank';
 console.log("path",__dirname);
 myapp.use(express.static(__dirname+'./../client/view'))
 myapp.use(express.static(__dirname + './../client'));
@@ -13,10 +13,10 @@ myapp.get('/',function(req,res)
 myapp.post('/signup',function(req,res)
 {
 
-/*MongoClient.connect(url , function(err,db){
+MongoClient.connect(url , function(err,db){
 
 if(err){
-/	console.log(err);
+	console.log(err);
 }
 console.log('connected')
 
@@ -29,7 +29,7 @@ res.send('created');
 
 })
 
-})*/
+})
 
 });
 myapp.get('/login',function(req,res)
