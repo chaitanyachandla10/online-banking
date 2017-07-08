@@ -10,6 +10,8 @@ myapp.get('/',function(req,res)
 	res.render('index.html');
 
 });
+
+//signup 
 myapp.post('/signup',function(req,res)
 {
 
@@ -25,26 +27,39 @@ if(err){
 	return res.send('Error');
 }
 res.send('created');
-
-
 })
-
 })
-
 });
+
+//login
 myapp.get('/login',function(req,res)
 {
-	if(data.password == req.query.password && data.uname == req.uname)
-	{
+	console.log('>>> data received from front' , req.query);
+	
+MongoClient.connect(url , function(err,db){
+
+if(err){
+	console.log(err);
+}
+console.log('connected')
+
+db.collection('Students').findOne({mail:req.query.mail} , function(err,data){
+if(err){
+	return res.send('Error');
+}
+
+if(data.password==req.query.password){
 
 	res.send(data);
-	}
-	else
-	{
-		res.send('password incorrect')
+}
+else{
+	res.send('passwor incorrect')
 
-	}
+}
 console.log(">>>>>> data" , data);
+})
+
+})
 
 });
 myapp.listen(5100,function()

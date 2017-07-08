@@ -20,6 +20,7 @@ $scope.signup=function()
 	.then(function(response)
 	{
      console.log("data sent in ",response);
+     $state.go('login');
 	})
 }
 })
