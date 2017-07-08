@@ -33,9 +33,11 @@ res.send('created');
 
 //login
 myapp.get('/login',function(req,res)
-{
+	{
+
 	console.log('>>> data received from front' , req.query);
 	
+
 MongoClient.connect(url , function(err,db){
 
 if(err){
@@ -43,10 +45,12 @@ if(err){
 }
 console.log('connected')
 
-db.collection('Students').findOne({mail:req.query.mail} , function(err,data){
+db.collection('user').findOne({email:req.query.email} , function(err,data){
 if(err){
 	return res.send('Error');
 }
+
+if(data){
 
 if(data.password==req.query.password){
 
@@ -54,13 +58,11 @@ if(data.password==req.query.password){
 }
 else{
 	res.send('passwor incorrect')
-
+}
 }
 console.log(">>>>>> data" , data);
 })
-
 })
-
 });
 myapp.listen(5100,function()
 {

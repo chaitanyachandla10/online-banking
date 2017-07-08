@@ -3,10 +3,10 @@ var app = angular.module('app',['ui.router']);
 app.config(function($stateProvider)
 {
 	$stateProvider
-	.state('home',
-	{
+	.state('home',{
 		url:'home',
-		templateUrl:'home.html'
+		templateUrl:'home.html',
+		controller:'home'
 		})
 	.state('index',{
 		url:'index',
@@ -19,6 +19,7 @@ app.config(function($stateProvider)
 		})
 	.state('login',{
 		url:'login',
-		templateUrl:'login.html'
+		templateUrl:'login.html',
+		controller:'login'
 		})
 });
