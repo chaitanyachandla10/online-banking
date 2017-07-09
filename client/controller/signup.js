@@ -2,11 +2,14 @@ app.controller('signup',function($scope,$state,$http)
 {
 $scope.signup=function()
 {
+
+    
+    var x;
 	$http
 	({
 		method:'POST',
 		url:'/signup',
-		params:
+		params: 
 		{
 			username : $scope.uname,
 			password : $scope.password,
@@ -14,7 +17,8 @@ $scope.signup=function()
 			email:$scope.email,
 			phone:$scope.phoneno,
 			pan:$scope.pan,
-			aadhar:$scope.aadhar
+			aadhar:$scope.aadhar,
+			Bankacc:myFunction(x)
 		}
 	})
 	.then(function(response)
@@ -24,3 +28,7 @@ $scope.signup=function()
 	})
 }
 })
+	function myFunction(x) 
+		{
+    		 return(Math.floor((Math.random() * 1000000) + 1))
+		}
