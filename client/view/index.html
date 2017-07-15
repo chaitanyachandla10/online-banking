@@ -46,31 +46,22 @@ banking
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
         <li><a href="#">Fund Transfer</a></li>
-        <li><a href="#">Internet Banking</a></li>
+    
 </ul>
-
-<li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Feedback
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-        <li><a href="#">Give Ratings</a></li>
-        <li><a href="#">Query</a></li>
-</ul>
-
 <li class="dropdown">
         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contacts
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-        <li><a href="#">Helpline No</a></li>
-        <li><a href="#">Email us</a></li>
+        <li><a ui-sref="contact">contact us on</a><li>
+        
 </ul>  
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">MORE
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Settings
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Transations</a></li>
-            <li><a href="#">Extras</a></li>
-            <li><a href="#">History</a></li> 
+            <li><a ui-sref="details">User details</a><li>
+             <li><a ui-sref="change">changepassword</a><li>
+            <li><a ui-sref="login">Log out</a></li> 
           </ul>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -206,6 +197,7 @@ banking
 <SCRIPT TYPE="text/javascript" src="./controller/index.js"></SCRIPT>
 <script type="text/javascript" src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 <SCRIPT TYPE="text/javascript" src="./controller/signup.js"></SCRIPT>
+<SCRIPT TYPE="text/javascript" src="./controller/details.js"></SCRIPT>
 <SCRIPT TYPE="text/javascript" src="./controller/login.js"></SCRIPT>
 <SCRIPT TYPE="text/javascript" src="./controller/home.js"></SCRIPT>
 <script>

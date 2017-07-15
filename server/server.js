@@ -14,7 +14,6 @@ myapp.get('/',function(req,res)
 //signup 
 myapp.post('/signup',function(req,res)
 {
-
 MongoClient.connect(url , function(err,db){
 
 if(err){
@@ -30,7 +29,14 @@ res.send('created');
 })
 })
 });
+//home 
+myapp.get('/home',function(req,res)
+{
 
+
+
+
+});
 //login
 myapp.get('/login',function(req,res)
 	{
@@ -50,8 +56,8 @@ if(err){
 	return res.send('Error');
 }
 
-if(data){
-
+if(data)
+{
 if(data.password==req.query.password){
 
 	res.send(data);

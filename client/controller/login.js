@@ -15,7 +15,7 @@
 .then(function(response)
 	{
 		console.log(">>>>>>. response data",response.data);
-		$state.go('home');
+		$state.go('home',{xyz : response.data});
 	})
 }
 });

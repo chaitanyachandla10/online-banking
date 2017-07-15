@@ -6,11 +6,27 @@ app.config(function($stateProvider)
 	.state('home',{
 		url:'home',
 		templateUrl:'home.html',
+		params:{
+				xyz :null
+			},
 		controller:'home'
 		})
 	.state('index',{
 		url:'index',
 		templateUrl:'index.html'
+		})
+	.state('change',{
+		url:'change',
+		templateUrl:'change.html',
+		controller:'change'
+		})
+	.state('details',{
+		url:'details',
+		templateUrl:'details.html',
+		params:{
+				xyz :null
+			},
+		controller:'details'
 		})
 	.state('signup',{
 		url:'signup',

@@ -1,9 +1,25 @@
 <br><br>
-<div ng-controller="home">
-<h1>hello welcome to B.M.S</h1>
-
-
-
-
-
+<div ng-controller="home" style="border:solid 2px;width:100%;">
+		<h1>hello welcome to B.M.S</h1>
+<div style="border:solid 2px;height:560px;width:280px;float:left;">
+		<div style="border:solid 2px;height:60px;width:80px;background-color:red;"><p>Transfer Money</p></div><br><br>
+		<div style="border:solid 2px;height:60px;width:80px;background-color:red;"><p>Transcation History</p></div><br><br>
+		<div style="border:solid 2px;height:30px;width:80px;background-color:red;">
+			<p>Balance</p></div>
+		<br><br>
+		<div style="border:solid 2px;height:60px;width:80px;background-color:red;">
+			<p ng-click="details()">Personal details</p></div>
+		</div>
+<div style="border:solid 2px;height:560px;width:780px;float:left;">	
+<center>
+		<table style="border:solid 2px;height:350px;width:450px;">	
+		<tr style="border:solid 2px;">
+		<td style="border:solid 2px;"><p><b>Username:</td><td>{{username}}</p><br></td></tr>
+		<tr style="border:solid 2px;"><td style="border:solid 2px;"><p>Email:</td><td>{{email}}</p><br></td></tr>
+		<tr style="border:solid 2px;"><td style="border:solid 2px;"><p>Bankacc:</td><td>{{Bankacc}}</b></p><br></td></tr>
+		<tr style="border:solid 2px;"><td style="border:solid 2px;"><p>Account balance:</td><td>{{AccountBala}}</b></p><br></td></tr>
+		</table>
+</center>	
+		</div>
+<br style="clear: left;" />			
 </div>
