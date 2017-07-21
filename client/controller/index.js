@@ -24,7 +24,7 @@ app.config(function($stateProvider)
 		url:'details',
 		templateUrl:'details.html',
 		params:{
-				xyz :null
+				abc :null
 			},
 		controller:'details'
 		})

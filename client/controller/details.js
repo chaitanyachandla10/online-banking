@@ -1,14 +1,14 @@
 app.controller('details',function($scope,$state,$http)
 {	
-console.log('loggedin successfully' , $state.params);
+console.log('details show ', $state.params);
 
-	$scope.user= $state.params.xyz;
+	$scope.user= $state.params.abc;
 
 
-	$scope.username = $state.params.xyz.username;
-	$scope.address = $state.params.xyz.address;
-	$scope.pan = $state.params.xyz.pan;
-	$scope.aadhar = $state.params.xyz.aadhar;
-	$scope.email = $state.params.xyz.email;
-	$scope.phone = $state.params.xyz.phone;
+	$scope.username = $state.params.abc.username;
+	$scope.address = $state.params.abc.address;
+	$scope.pan = $state.params.abc.pan;
+	$scope.aadhar = $state.params.abc.aadhar;
+	$scope.email = $state.params.abc.email;
+	$scope.phone = $state.params.abc.phone;
 });

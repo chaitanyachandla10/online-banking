@@ -1,6 +1,6 @@
 app.controller('home',function($scope,$state,$http)
 {	
-console.log('loggedin successfully' , $state.params);
+console.log('loggedin successfully',$state.params);
 
 	$scope.user= $state.params.xyz;
 
@@ -12,6 +12,6 @@ console.log('loggedin successfully' , $state.params);
 	
 	$scope.details=function()
 	{
-		$state.go('details',{xyz : response.data});
+		$state.go("details");
 	}
 });
