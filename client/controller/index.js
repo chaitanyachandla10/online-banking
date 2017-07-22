@@ -33,9 +33,6 @@ app.config(function($stateProvider)
 	.state('details',{
 		url:'details',
 		templateUrl:'details.html',
-		params:{
-				abc :null
-			},
 		controller:'details'
 		})
 	.state('signup',{

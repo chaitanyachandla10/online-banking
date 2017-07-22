@@ -1,6 +1,6 @@
-app.controller('details',function($scope,$state,$http)
+app.controller('details',function($scope,$state)
 {	
-console.log('details show ', $state.params);
+console.log('details show',$state.params);
 
 	$scope.user= $state.params.abc;
 

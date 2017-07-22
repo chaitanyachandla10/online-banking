@@ -1,16 +1,15 @@
 <br><br>
-<div ng-controller="home" style="border:solid 2px;width:100%;">
+<div ng-controller="home">
+<div style="border:solid 2px;width:100%;">
 		<h1>hello welcome to B.M.S</h1>
-<div style="border:solid 2px;height:560px;width:500px;float:left;">
-		<button style="border:solid 2px;height:60px;width:80px;background-color:red;"><p>Transfer Money</p></button><br><br>
-		<button style="border:solid 2px;height:60px;width:80px;background-color:red;"><p>Transcation History</p></button><br><br>
-		<button style="border:solid 2px;height:30px;width:80px;background-color:red;">
-			<p>Balance</p></button>
+<div style="border:solid 2px;height:560px;width:150px;float:left;background-color:red;">
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="Money()">Transfer Money</button><br><br>
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="History()">Transcation History</button><br><br>
+		<button style="border:solid 2px;height:30px;width:80px;background-color:orange;" ng-click="Balance()">Balance</button>
 		<br><br>
-		<button style="border:solid 2px;height:60px;width:80px;background-color:red;" ng-click="details()">
-			<p>Personal details</p></button>
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="details()">Personal details</button>
 		</div>
-<div style="border:solid 2px;height:560px;width:780px;float:left;" ui-view="">	
+<div style="border:solid 2px;height:560px;width:780px;float:left;">	
 <center>
 		<table style="border:solid 2px;height:350px;width:450px;">	
 		<tr style="border:solid 2px;">
@@ -22,4 +21,5 @@
 </center>	
 		</div>
 <br style="clear: left;" />			
+</div>
 </div>

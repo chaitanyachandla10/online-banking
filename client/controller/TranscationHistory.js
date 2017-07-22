@@ -1,14 +1,4 @@
-app.controller('TranscationHistory',$scope,$state,$http)
+app.controller('TranscationHistory',function($scope,$state,$http)
 {
 
-
-
-
-
-
-$scope.details=function()
-{
-	$state.go('details');
-}
-
-}
+});
