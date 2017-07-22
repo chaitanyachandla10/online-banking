@@ -20,6 +20,16 @@ app.config(function($stateProvider)
 		templateUrl:'change.html',
 		controller:'change'
 		})
+	.state('TransferMoney',{
+		url:'TransferMoney',
+		templateUrl:'TransferMoney.html',
+		controller:'TransferMoney'
+		})
+	.state('TranscationHistory',{
+		url:'TranscationHistory',
+		templateUrl:'TranscationHistory.html',
+		controller:'TranscationHistory'
+		})
 	.state('details',{
 		url:'details',
 		templateUrl:'details.html',
