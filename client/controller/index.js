@@ -1,5 +1,4 @@
 var app = angular.module('app',['ui.router']);
-
 app.config(function($stateProvider)
 {
 	$stateProvider
@@ -33,6 +32,9 @@ app.config(function($stateProvider)
 	.state('details',{
 		url:'details',
 		templateUrl:'details.html',
+		params:{
+				abc:null
+			},
 		controller:'details'
 		})
 	.state('signup',{
@@ -43,6 +45,9 @@ app.config(function($stateProvider)
 	.state('login',{
 		url:'login',
 		templateUrl:'login.html',
+		params:{
+				xyz :null
+			},
 		controller:'login'
 		})
 });

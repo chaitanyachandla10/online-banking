@@ -14,8 +14,11 @@
 	})
 .then(function(response)
 	{
-		console.log(">>>>>>. response data",response.data);
-		$state.go('home',{xyz : response.data});
+		console.log(">>>>>>. response data",response.data)
+		document.cookie = "email=" + response.data.mail;
+		console.log("cookie" , document.cookie)
+    // $scope.showLoader = false;
+		$state.go('home' , {xyz : response.data});
 	})
 }
 });

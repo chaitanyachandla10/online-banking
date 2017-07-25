@@ -5,7 +5,8 @@ console.log('details show',$state.params);
 	$scope.user= $state.params.abc;
 
 
-	$scope.username = $state.params.abc.username;
+	$scope.user = $state.params.abc.username;
+	$scope.password = $state.params.abc.password;
 	$scope.address = $state.params.abc.address;
 	$scope.pan = $state.params.abc.pan;
 	$scope.aadhar = $state.params.abc.aadhar;

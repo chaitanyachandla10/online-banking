@@ -32,11 +32,31 @@ res.send('created');
 //home 
 myapp.get('/home',function(req,res)
 {
+	console.log('>>> data received from front' , req.query);
+	
 
+MongoClient.connect(url , function(err,db){
 
+if(err)
+	{
+	console.log(err);
+	}
+	console.log('connected')
 
-
+	db.collection('user').findOne({email:req.query.email} , function(err,data){
+	if(err)
+	{
+		return res.send('Error');
+	}
+	if(data)
+	{
+		res.send(data);
+	}
+console.log(">>>>>> data" , data);
+})
+})
 });
+
 //login
 myapp.get('/login',function(req,res)
 	{
@@ -63,7 +83,7 @@ if(data.password==req.query.password){
 	res.send(data);
 }
 else{
-	res.send('passwor incorrect')
+	res.send('password incorrect')
 }
 }
 console.log(">>>>>> data" , data);
