@@ -29,12 +29,13 @@ res.send('created');
 })
 })
 });
+
+
 //home 
 myapp.get('/home',function(req,res)
 {
 	console.log('>>> data received from front' , req.query);
 	
-
 MongoClient.connect(url , function(err,db){
 
 if(err)
@@ -60,19 +61,16 @@ console.log(">>>>>> data" , data);
 //login
 myapp.get('/login',function(req,res)
 	{
-
 	console.log('>>> data received from front' , req.query);
-	
-
-MongoClient.connect(url , function(err,db){
-
-if(err){
-	console.log(err);
-}
-console.log('connected')
-
-db.collection('user').findOne({email:req.query.email} , function(err,data){
-if(err){
+	MongoClient.connect(url , function(err,db){
+	if(err)
+	{
+		console.log(err);
+	}
+	console.log('connected')
+	db.collection('user').findOne({email:req.query.email} , function(err,data){
+	if(err)
+	{
 	return res.send('Error');
 }
 
@@ -90,7 +88,28 @@ console.log(">>>>>> data" , data);
 })
 })
 });
+
+
+myapp.get('/TransferMoney',function(req,res)
+	{	
+		console.log('>>> data received from front' , req.query);
+	MongoClient.connect(url , function(err,db)
+	{
+	if(err)
+	{
+		console.log(err);
+	}
+	console.log('connected')
+	db.collection('user').updateOne({'Bankcc' : 'req.query.accountno'},{'AccountBala':'req.query.amounts'});
+	if(err)
+	{
+	return res.send('Error');
+	}
+
+	});
+	});
+
 myapp.listen(5100,function()
 {
 	console.log('server is running');
-})
+});

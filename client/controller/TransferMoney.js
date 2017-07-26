@@ -1,4 +1,19 @@
 app.controller('TransferMoney',function($scope,$state,$http)
 {
-
+$scope.Transfer=function()
+{
+	http
+	({
+		method:'GET',
+		URL:'/TransferMoney',
+		params:{
+			accountno:$scope.accountno,
+			amount:$scope.amount
+		}
+	})
+	.then(function(response)
+	{
+		alert("amount is Transfer");
+	})
+}
 });

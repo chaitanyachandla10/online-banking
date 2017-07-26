@@ -18,7 +18,7 @@ $scope.signup=function()
 			phone:$scope.phoneno,
 			pan:$scope.pan,
 			aadhar:$scope.aadhar,
-			AccountBala:0,
+			AccountBala:1000,
 			Bankacc:myFunction(x)
 		}
 	})
