@@ -47,10 +47,14 @@ console.log('loggedin successfully',$state.params);
 
 		$scope.History=function()
 	{
-		$state.go("TranscationHistory",{xyz : response.data});
+		$state.go("TranscationHistory");
 	}
 		$scope.Balance=function()
 	{
 		$state.go("home");
+	}
+	$scope.feedback=function()
+	{
+		$state.go("feedback");
 	}
 });

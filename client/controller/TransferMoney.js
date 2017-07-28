@@ -1,19 +1,24 @@
 app.controller('TransferMoney',function($scope,$state,$http)
 {
-$scope.Transfer=function()
+$scope.transfer=function()
 {
-	http
+	$http
 	({
 		method:'GET',
-		URL:'/TransferMoney',
-		params:{
-			accountno:$scope.accountno,
-			amount:$scope.amount
+		url:'/TransferMoney',
+		params:
+		{
+			accountno : $scope.accountno,
+			amount : $scope.amount
 		}
 	})
-	.then(function(response)
+.then(function(response)
 	{
-		alert("amount is Transfer");
+		console.log(">>>>>>. response data",response.data)
+		document.cookie = "email=" + response.data.mail;
+		console.log("cookie" , document.cookie)
+    // $scope.showLoader = false;
+		alert("Money Transfer");
 	})
 }
 });

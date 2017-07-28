@@ -50,4 +50,9 @@ app.config(function($stateProvider)
 			},
 		controller:'login'
 		})
+	.state('feedback',{
+		url:'feedback',
+		templateUrl:'feedback.html',
+		controller:'Feedback'
+		})
 });
