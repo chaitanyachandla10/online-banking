@@ -89,25 +89,35 @@ console.log(">>>>>> data" , data);
 })
 });
 
-
+//Transfer Money
 myapp.get('/TransferMoney',function(req,res)
 	{	
 		console.log('>>> data received from front' , req.query);
-	MongoClient.connect(url , function(err,db)
+		MongoClient.connect(url , function(err,db)
 	{
-	if(err)
+		db.collection('user').findOne({Bankcc:req.query.accountno},function(err,data)
 	{
-		console.log(err);
-	}
-	console.log('connected')
-	db.collection('user').updateOne({'Bankcc' : 'req.query.accountno'},{'AccountBala':'req.query.amounts'});
-	if(err)
+		if(err)
 	{
-	return res.send('Error');
+		return res.send('Error');
 	}
 
-	});
-	});
+		if(data)
+	{
+
+
+		console.log('connected')
+			db.collection('user').updateOne({"Bankcc": "req.query.accountno"},{$set:{"AccountBala":"req.query.amount"}});
+	}
+		else
+	{
+		res.send('Account no is not correct')
+	}
+
+		console.log(">>>>>> data" , data);
+})
+})
+});
 
 myapp.listen(5100,function()
 {
