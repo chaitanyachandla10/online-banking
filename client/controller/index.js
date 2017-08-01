@@ -42,6 +42,11 @@ app.config(function($stateProvider)
 		templateUrl:'signup.html',
 		controller:'signup'
 		})
+	.state('passwordchange',{
+		url:'passwordchange',
+		templateUrl:'passwordchange.html',
+		controller:'passwordchange'
+		})
 	.state('login',{
 		url:'login',
 		templateUrl:'login.html',
@@ -53,6 +58,6 @@ app.config(function($stateProvider)
 	.state('feedback',{
 		url:'feedback',
 		templateUrl:'feedback.html',
-		controller:'Feedback'
+		controller:'feedback'
 		})
 });
