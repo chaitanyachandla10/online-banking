@@ -1,5 +1,5 @@
 app.controller('passwordchange',function($scope,$state,$http)
-{	$scope.change=function()
+{	$scope.submit=function()
 	{
 		
 		$http

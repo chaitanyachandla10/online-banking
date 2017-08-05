@@ -42,7 +42,7 @@ console.log('loggedin successfully',$state.params);
 	.then(function(response)
 		{
 				$state.go('TransferMoney',{xyz : response.data});
-		})
+ 		})
 	}
 
 		$scope.History=function()

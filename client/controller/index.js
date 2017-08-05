@@ -14,11 +14,6 @@ app.config(function($stateProvider)
 		url:'index',
 		templateUrl:'index.html'
 		})
-	.state('change',{
-		url:'change',
-		templateUrl:'change.html',
-		controller:'change'
-		})
 	.state('TransferMoney',{
 		url:'TransferMoney',
 		templateUrl:'TransferMoney.html',
@@ -59,5 +54,10 @@ app.config(function($stateProvider)
 		url:'feedback',
 		templateUrl:'feedback.html',
 		controller:'feedback'
+		})
+	.state('logout',{
+		url:'logout',
+		templateUrl:'feedback.html',
+		controller:'logout'
 		})
 });

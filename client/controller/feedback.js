@@ -1,5 +1,7 @@
 app.controller('feedback',function($scope,$state,$http)
 {
+
+
 	$scope.feedback=function()
 	{
 		$http
@@ -7,7 +9,8 @@ app.controller('feedback',function($scope,$state,$http)
 		method:'GET',
 		url:'/feedback',
 		params:
-		{
+		{	
+			email:$scope.email,
 			message:$scope.message
 		}
 	})
