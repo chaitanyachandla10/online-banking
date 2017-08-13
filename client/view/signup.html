@@ -1,17 +1,19 @@
 <br><br>
 <div border="solid" height="650px" width="100%">
-<div ng-controller="signup" border="solid" height="650px" width="100%">
+<div ng-controller="signup" border="solid" height="650px" width="100%" background-color="blue">
 <center>
 <h2>FIll Form</h2>
-<Label>Name:</label><input type="text" placeholder="name" ng-model="uname"><br><br>
-<Label>password:</label><input type="password" placeholder="password" ng-model="password"><br><br>
-<Label>confirm password:</label><input type="password" placeholder="Retype" ng-model="password"><br><br>	
-<Label>Address:</label><input type="text" placeholder="address" ng-model="address"><br><br>
-<Label>Email:</label><input type="email" placeholder="email" ng-model="email"><br><br>
-<Label>Phone No:</label><input type="int" placeholder="phoneno" ng-model="phoneno"><br><br>
-<Label>PAN Number:</label><input type="number" placeholder="PAN" ng-model="pan"><br><br>
-<Label>Aadhaar Card Number:</label><input type="number" placeholder="6511531651" ng-model="aadhar"><br><br>
-<BUTTON ng-click="signup()">submit</BUTTON>
+<Label class="col-sm-4"  background-color="blue">Name:</label><input type="text" placeholder="name" ng-model="uname"class="col-sm-4"><br><br>
+<Label class="col-sm-4">password:</label><input type="password" placeholder="password" ng-model="password" class="col-sm-4"><br><br>
+<Label class="col-sm-4">confirm password:</label><input type="password" placeholder="Retype" ng-model="password" class="col-sm-4"><br><br>	
+<Label class="col-sm-4">Address:</label><input type="text" placeholder="address" ng-model="address" class="col-sm-4"><br><br>
+<Label class="col-sm-4">Email:</label><input type="email" placeholder="email" ng-model="email" class="col-sm-4"><br><br>
+<Label class="col-sm-4">Phone No:</label><input type="int" placeholder="phoneno" ng-model="phoneno" class="col-sm-4"><br><br>
+<Label class="col-sm-4">PAN Number:</label><input type="number" placeholder="PAN" ng-model="pan" class="col-sm-4"><br><br>
+<Label class="col-sm-4">Aadhaar Card Number:</label><input type="number" placeholder="6511531651" ng-model="aadhar" class="col-sm-4"><br><br>
+<BUTTON ng-click="signup()" class="btn btn-primary">submit</BUTTON>
+<div class="alert alert-success" role="alert" ng-show="success">{{msg.successfull_registered}}</div>
+<div class="alert alert-danger" role="alert" ng-show="danger">{{msg.notregistered}}</div>
 </center>
 </div>
 </div>

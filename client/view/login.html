@@ -1,12 +1,14 @@
 <br><br>
-<div border="solid" height="650px" width="100%" ng-controller="login">
+<div  border="solid" height="650px" width="100%" ng-controller="login">
 <center>
 <h1>login page</h1>
-<LABEL>Email:</LABEL>
-<input type="text" placeholder="Email" ng-model="email"><br><br>
-<LABEL>password:</LABEL>
-<input type="password" placeholder="login" ng-model="password"><br><br>
+&ensp;&ensp;&ensp; <LABEL class="col-sm-4">Email:</LABEL>
+<input type="text" placeholder="Email" ng-model="email" class="col-sm-4"><br><br>
+&ensp;&ensp;&ensp;<LABEL class="col-sm-4">password:</LABEL>
+<input type="password" placeholder="login" ng-model="password" class="col-sm-4"><br><br>
 
-<button ng-click="login()">submit</button>&ensp;&ensp;&ensp;<br><br><a ui-sref="signup">Signup HERE</a>
+<button ng-click="login()" class="btn btn-primary">submit</button>&ensp;&ensp;&ensp;<br><br><a ui-sref="signup" class="btn btn-link">Signup HERE</a>
+<div class="alert alert-success" role="alert">{{}}</div>
+<div class="alert alert-danger" role="alert">{{}}</div>
 </center>
 </div>

@@ -1,6 +1,5 @@
 var express = require('express');
 var myapp = express();
-var session = require('express-session');
 
 var MongoClient = require('mongodb').MongoClient
 var url = 'mongodb://localhost:27017/onlinebank';
@@ -12,31 +11,39 @@ myapp.get('/',function(req,res)
 	res.render('index.html');
 
 });
-myapp.use(session({secret: 'ssshhhhh'}));
-var sess;
 
 //signup 
 myapp.post('/signup',function(req,res)
 {
-MongoClient.connect(url , function(err,db){
-
-if(err){
-	console.log(err);
-}
-console.log('connected')
-
-db.collection('user').insertOne(req.query , function(err,data){
-if(err){
-	return res.send('Error');
-}
-res.send('created');
-})
-})
+	if(req.uname==!null||req.password==!null||req.address==!null||req.phoneno==!null||req.pan==!null||req.aadhar==!null)
+	{
+				
+			MongoClient.connect(url , function(err,db){
+			if(err)
+			{
+			console.log(err);
+			}
+			console.log('connected')
+			db.collection('user').insertOne(req.query , function(err,data)
+			{
+			if(err)
+			{
+				return res.send('Error');
+			}
+			res.send('created');
+			})
+			})
+			res.send("The form is registered");
+	}			
+	else
+	{
+				res.send("Please fill all the rows");
+	}
+			
 });
 //login
 myapp.get('/login',function(req,res)
-	{	
-	sess=req.session	
+	{		
 	console.log('>>> data received from front' , req.query);
 	MongoClient.connect(url , function(err,db){
 	if(err)
@@ -150,14 +157,14 @@ myapp.get('/feedback',function(req,res)
 })
 });
 //logout
-myapp.get('/logout',function(req,res){
+/*myapp.get('/logout',function(req,res){
 req.session.destroy(function(err) {
   if(err) {
     console.log(err);
   } else {
     res.redirect('/');
   }
-});});
+});});*/
 
 //change password
 myapp.get('/passwordchange',function(req,res)
