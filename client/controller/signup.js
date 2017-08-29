@@ -13,7 +13,7 @@ $scope.signup=function()
 			username : $scope.uname,
 			password : $scope.password,
 			address	:$scope.address,
-			email:$scope.address,
+			email:$scope.email,
 			phone:$scope.phoneno,
 			pan:$scope.pan,
 			aadhar:$scope.aadhar,

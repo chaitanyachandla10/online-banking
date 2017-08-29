@@ -19,31 +19,26 @@ myapp.get('/',function(req,res)
 //signup 
 myapp.post('/signup',function(req,res)
 {
-	if(req.uname!=null||req.password!=null||req.address!=null||req.phoneno!=null||req.pan!=null||req.aadhar!=null)
-	{	
-			MongoClient.connect(url , function(err,db)
+			MongoClient.connect(url,function(err,db)
 			{
 			if(err)
 			{
 			console.log(err);
 			}
 			console.log('connected')
-			db.collection('user').insertOne(req.query , function(err,data)
+			db.collection('user').insertOne(req.query,function(err,data)
 			{
 			if(err)
 			{
 				return res.send('Error');
 			}
-			res.send('created');
+			if(data)
+			{
+				res.send(data);
+			}
+		console.log(">>>>>> data" , data);
 			})
-			})
-			res.send("The form is registered");
-	}			
-	if(req.uname==null||req.password==null||req.address==null||req.phoneno==null||req.pan==null||req.aadhar==null)
-	{
-				res.send("Please fill all the rows");
-	}
-			
+			})		
 });
 //login+
 myapp.get('/login',function(req,res)
@@ -126,8 +121,7 @@ myapp.get('/TransferMoney',function(req,res)
 					console.log("rerr" , err);
 
 				}
-
-				console.log(">>>> updatedd one" , updated);
+				console.log(">>>> updatedd one",updated);
 				res.send(data);
 			});
 	}

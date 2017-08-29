@@ -24,6 +24,12 @@ app.config(function($stateProvider)
 		templateUrl:'TranscationHistory.html',
 		controller:'TranscationHistory'
 		})
+	.state('/facebook/:token', {
+        templateUrl: 'app/views/pages/users/social/social.html',
+        controller: 'facebookCtrl',
+        controllerAs: 'facebook',
+        authenticated: false
+    })
 	.state('details',{
 		url:'details',
 		templateUrl:'details.html',
