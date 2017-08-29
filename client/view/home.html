@@ -1,23 +1,23 @@
 <br>
-<div ng-controller="home">
-<div style="border:solid 2px;width:100%;">
+<div ng-controller="home" class="container">
+<div style="border:solid 2px;width:100%;" class="row">
 		<h1>hello welcome to B.M.S</h1>
-<div style="border:solid 2px;height:560px;width:150px;float:left;background-color:red;">
-		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="Money()">Transfer Money</button><br><br>
-		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="History()">Transcation History</button><br><br>
-		<button style="border:solid 2px;height:30px;width:80px;background-color:orange;" ng-click="Balance()">Balance</button>
+<div style="border:solid 2px;height:560px;width:150px;float:left;background-color:red;" class="col-sm-4">
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="Money()" class="col-sm-4">Transfer Money</button><br><br>
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="History()" class="col-sm-4">Transcation History</button><br><br>
+		<button style="border:solid 2px;height:30px;width:80px;background-color:orange;" ng-click="Balance()" class="col-sm-4">Balance</button>
 		<br><br>
-		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="details()">Personal details</button><br><br>
-		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="feedback()">Feeback </button>
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="details()" class="col-sm-4">Personal details</button><br><br>
+		<button style="border:solid 2px;height:60px;width:80px;background-color:orange;" ng-click="feedback()" class="col-sm-4">Feeback </button>
 		</div>
 <div style="border:solid 2px;height:560px;width:780px;float:left;">	
 <center>
-		<table style="border:solid 2px;height:350px;width:450px;">	
-		<tr style="border:solid 2px;">
-		<td style="border:solid 2px;"><p><b>Username:</b></td><td style="border:solid 2px; width:150px">{{username}}</p><br></td></tr>
+		<table style="border:solid 2px;height:350px;width:450px;" class="col-sm-4">	
+		<tr style="border:solid 2px;" >
+		<td style="border:solid 2px;" ><p><b>Username:</b></td><td style="border:solid 2px; width:150px">{{username}}</p><br></td></tr>
 		<tr style="border:solid 2px;"><td style="border:solid 2px;width:80px"><p>Email:</td><td style="border:solid 2px;width:150px">{{email}}</p><br></td></tr>
 		<tr style="border:solid 2px;"><td style="border:solid 2px;width:80px"><p>Bankacc:</td><td style="border:solid 2px;width:150px">{{Bankacc}}</b></p><br></td></tr>
-		<tr style="border:solid 2px;"><td style="border:solid 2px;width:80px"><p>Account balance:</td><td style="border:solid 2px;width:150px">{{AccountBala}}</p><br></td></tr>
+		<tr style="border:solid 2px;"><td style="border:solid 2px;width:80px" ><p>Account balance:</td><td style="border:solid 2px;width:150px">{{AccountBala}}</p><br></td></tr>
 		</table>
 </center>	
 		</div>

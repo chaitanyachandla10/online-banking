@@ -9,8 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular-passport": "^1.0.6",
     "express": "^4.15.3",
     "express-session": "^1.15.5",
-    "mongodb": "^2.2.29"
+    "mongodb": "^2.2.29",
+    "morgan": "^1.8.2",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "path": "^0.12.7"
   }
 }

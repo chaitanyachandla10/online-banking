@@ -1,7 +1,11 @@
 var express = require('express');
 var myapp = express();
+var passport = require('passport');
+var social =require('./passport/passport')(myapp, passport);
+var morgan = require('morgan');
+var path	= require('path');
+var MongoClient = require('mongodb').MongoClient;
 
-var MongoClient = require('mongodb').MongoClient
 var url = 'mongodb://localhost:27017/onlinebank';
 console.log("path",__dirname);
 myapp.use(express.static(__dirname+'./../client/view'))
@@ -15,10 +19,10 @@ myapp.get('/',function(req,res)
 //signup 
 myapp.post('/signup',function(req,res)
 {
-	if(req.uname==!null||req.password==!null||req.address==!null||req.phoneno==!null||req.pan==!null||req.aadhar==!null)
-	{
-				
-			MongoClient.connect(url , function(err,db){
+	if(req.uname!=null||req.password!=null||req.address!=null||req.phoneno!=null||req.pan!=null||req.aadhar!=null)
+	{	
+			MongoClient.connect(url , function(err,db)
+			{
 			if(err)
 			{
 			console.log(err);
@@ -35,13 +39,13 @@ myapp.post('/signup',function(req,res)
 			})
 			res.send("The form is registered");
 	}			
-	else
+	if(req.uname==null||req.password==null||req.address==null||req.phoneno==null||req.pan==null||req.aadhar==null)
 	{
 				res.send("Please fill all the rows");
 	}
 			
 });
-//login
+//login+
 myapp.get('/login',function(req,res)
 	{		
 	console.log('>>> data received from front' , req.query);

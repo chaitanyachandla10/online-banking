@@ -7,7 +7,12 @@
 &ensp;&ensp;&ensp;<LABEL class="col-sm-4">password:</LABEL>
 <input type="password" placeholder="login" ng-model="password" class="col-sm-4"><br><br>
 
-<button ng-click="login()" class="btn btn-primary">submit</button>&ensp;&ensp;&ensp;<br><br><a ui-sref="signup" class="btn btn-link">Signup HERE</a>
+<button ng-click="login()" class="btn btn-primary">submit</button>&ensp;&ensp;&ensp;
+
+<a href="/auth/facebook" target="_blank"><button type="button" class="btn btn-success">Facebook</button></a>
+
+<br><br><a ui-sref="signup" class="btn btn-link">Signup HERE</a>
+
 <div class="alert alert-success" role="alert">{{}}</div>
 <div class="alert alert-danger" role="alert">{{}}</div>
 </center>
