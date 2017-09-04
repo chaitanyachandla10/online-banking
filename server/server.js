@@ -4,8 +4,10 @@ var passport = require('passport');
 var social =require('./passport/passport')(myapp, passport);
 var morgan = require('morgan');
 var path	= require('path');
+var session = require('express-session'); // Import Express Session Package
+var jwt = require('jsonwebtoken');
 var MongoClient = require('mongodb').MongoClient;
-
+var FacebookStrategy = require('passport-facebook').Strategy
 var url = 'mongodb://localhost:27017/onlinebank';
 console.log("path",__dirname);
 myapp.use(express.static(__dirname+'./../client/view'))
@@ -200,7 +202,6 @@ myapp.get('/passwordchange',function(req,res)
 })
 })
 });
-
 myapp.listen(5100,function()
 {
 	console.log('server is running');

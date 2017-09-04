@@ -1,6 +1,6 @@
 var mongoose = require('mongoose'); // Import Mongoose Package
 var Schema = mongoose.Schema; // Assign Mongoose Schema function to variable
-var bcrypt = require('bcrypt-nodejs'); // Import Bcrypt Package
+//var bcrypt = require('bcrypt-nodejs'); // Import Bcrypt Package
 var titlize = require('mongoose-title-case'); // Import Mongoose Title Case Plugin
 var validate = require('mongoose-validator'); // Import Mongoose Validator Plugin
 
@@ -86,7 +86,7 @@ UserSchema.pre('save', function(next) {
 });
 
 // Mongoose Plugin to change fields to title case after saved to database (ensures consistency)
-/*UserSchema.plugin(titlize, {
+UserSchema.plugin(titlize, {
     paths: ['name']
 });
 
@@ -96,4 +96,3 @@ UserSchema.methods.comparePassword = function(password) {
 };
 
 module.exports = mongoose.model('User', UserSchema); // Export User Model for us in API
-*/
